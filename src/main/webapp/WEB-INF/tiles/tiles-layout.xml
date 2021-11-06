@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<!-- 로그인 전 -->
+	<definition name="baseLayout" template="/WEB-INF/views/comm/mainLayout.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/comm/header.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="side-content" value="/WEB-INF/views/comm/side-contents.jsp" />
+	</definition>
+
+	<definition name="/main" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/views/main-content/coin/coin-main.jsp" />
+	</definition>
+	
+	<definition name="/blog" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/views/main-content/blog/blog-main.jsp" />
+	</definition>
+	
+	<definition name="/blog/blog-my" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/views/main-content/blog/myPage/blog-my.jsp" />
+	</definition>
+	
+	<definition name="/blog/writeForm" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/views/main-content/blog/myPage/writeForm.jsp" />
+	</definition>
+	<definition name="/blog/Freeboard" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/views/main-content/blog/myPage/Freeboard.jsp" />
+	</definition>
+	<definition name="/blog/upbitboard" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/views/main-content/blog/myPage/upbitboard.jsp" />
+	</definition>
+	<definition name="/blog/bithumbboard" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/views/main-content/blog/myPage/bithumbboard.jsp" />
+	</definition>
+	<definition name="/blog/coinoneboard" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/views/main-content/blog/myPage/coinoneboard.jsp" />
+	</definition>
+	
+	<definition name="/exchange/upbit" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/views/main-content/exchange/upbit.jsp" />
+	</definition>
+	
+	<definition name="/exchange/bithumb" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/views/main-content/exchange/bithumb.jsp" />
+	</definition>
+	
+	<definition name="/chat" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/views/side-content/chat.jsp" />
+	</definition>
+	
+	<!-- 코인 디테일 뷰 -->
+	<definition name="/detail/bitcoin" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/views/main-content/coin/coin-detail.jsp" />
+	</definition>
+</tiles-definitions>

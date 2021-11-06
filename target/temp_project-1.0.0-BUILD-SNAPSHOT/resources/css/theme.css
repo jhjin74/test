@@ -1,0 +1,230 @@
+/* 공용 */
+* {
+    box-sizing: border-box;
+}
+
+div {
+    display: block;
+}
+
+html, body {
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    background-color: aliceblue;
+}
+
+.flex-auto {
+    flex: 1 1 auto!important;
+}
+
+.flex {
+    display: flex!important;
+}
+
+.w-full {
+    width: 100%!important;
+}
+
+.flex-none {
+    flex: none!important;
+}
+
+.relative {
+    position: relative!important;
+}
+
+.flex-col {
+    flex-direction: column!important;
+}
+
+.h-full {
+    height: 100%!important;
+}
+
+.pt-5 {
+    padding-top: 10px!important;
+}
+
+.px-10 {
+    padding-left: 20px!important;
+    padding-right: 20px!important;
+}
+
+.self-center {
+    align-self: center!important;
+}
+
+.sm:w-auto {
+    width: auto!important;
+}
+/* 공용 끝 */
+
+/* 헤더 시작 */
+.background_color {
+}
+.header {
+	height: 66px;	
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	box-shadow: inset 0 -1px 0 0 var(--COLOR-borderWeak);
+	margin-top: 10px;
+}
+
+/* 헤더 왼쪽 시작 */
+.header-left {
+    display: flex;
+    align-items: center;
+    height: 56px;
+    margin-left: 60px;
+}
+
+/* 헤더 왼쪽 - 로고 시작 */
+.logo-container {
+    width: 180px;
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.logo-container a {
+    text-decoration: none;
+}
+
+/* 헤더 왼쪽 - 로고 끝 */
+
+/* 헤더 왼쪽 - 네비 시작 */
+.navi {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 0 12px;
+    height: 100%!important;
+    margin-left: 1px;
+}
+
+.navi a {
+    height: 100%;
+}
+
+.navi-menu {
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    font-size: 20px!important;
+    padding: 0 8px;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    line-height: 1;
+    cursor: pointer;
+    border-radius: 0;
+    transition: all .2s;
+    min-height: 29px;
+    height: 100%;
+    text-decoration: none;
+}
+
+/* 헤더 왼쪽 - 네비 끝 */
+
+/* 헤더 왼쪽 끝 */
+
+/* 헤더 오른쪽 시작 */
+.header-right {
+    display: flex;
+    position: relative;
+    align-content: center;
+    align-items: center;
+    height: 56px;
+    margin-right: 60px;
+}
+
+/* 헤더 오른쪽 - 유저 프로필 사진 및 닉네임 시작 */
+.userbox {
+	display: none;
+}
+
+.userbox-view {
+    position: relative;
+    display: inline-flex;
+    align-items: center!important;
+    margin: 0 5px 0 auto;
+}
+
+.userbox-view .profile-picture {
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.userbox-view .profile-picture img {
+    width: 50px;
+    color: transparent;
+    margin: 0!important;
+    display: inline-block;
+    vertical-align: middle;
+    border: 0;
+    border-radius: 50%;
+}
+
+.userbox-view .profile-info {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.userbox-view .name {
+    color: #001;
+    font-size: 1rem;
+    line-height: 1.2em;
+    margin-right: 5px;
+}
+
+/* 헤더 오른쪽 - 유저 프로필 사진 및 닉네임 끝 */
+
+
+
+/* 헤더 오른쪽 - 로그인 및 회원가입 버튼 시작 */
+.login-join {
+	position: relative;
+    display: inline-flex;
+    align-items: center!important;
+    margin: 0 5px 0 auto;	
+}
+
+.login-join-view {
+	
+	display: block;
+}
+
+.login-join-view button {
+    background-color: #fff;
+    border: 0;
+    width: 100px;
+}
+
+.login-join-view button a {
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* 헤더 오른쪽 - 로그인 및 회원가입 버튼 끝 */
+
+/* 헤더 오른쪽 끝 */
+
+/* 헤더 끝 */
+
+/* 메인 컨텐츠 시작 */
+#viewport-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+
+/* 메인 컨텐츠 끝 */

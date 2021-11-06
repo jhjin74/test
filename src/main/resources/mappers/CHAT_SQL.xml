@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="chat">
+	<!-- 채팅 로그 넣기 -->
+	<insert id="insertChatLog" parameterType="hashmap">
+		INSERT INTO CHAT_LOG (USER_NICKNAME, CHAT_MESSAGE) 
+		VALUES(#{userNick}
+			 , #{content}
+			  )
+	</insert>
+   
+   <!-- 채팅내용 가져오기 -->
+   <select id="selectChatLog" parameterType="hashmap" resultType="hashmap">
+		SELECT USER_NICKNAME
+			 , CHAT_MESSAGE
+		  FROM CHAT_LOG
+      ORDER BY TIME ASC
+	</select>
+</mapper>

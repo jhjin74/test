@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="blog">
+	<select id="selectMyBlog" parameterType="hashmap" resultType="hashmap">
+		SELECT BNO
+			 , TITLE
+			 , CATEGORY
+			 , CONTENT
+			 , HIT_CNT
+			 , REGDATE
+		  FROM BLOG_BOARD	 
+		 WHERE USER_NICKNAME = #{userNick}
+      ORDER BY BNO DESC
+	</select>
+	
+   <insert id="insertwriteForm" parameterType="hashmap">
+   		INSERT INTO BLOG_BOARD (
+   			BNO,
+   			TITLE,
+   			CATEGORY,
+   			USER_NICKNAME,
+   			CONTENT,
+   			REGDATE
+   		)
+   		VALUES (
+   			BLOG_BOARD_BNO.NEXTVAL,
+   			#{title},
+   			#{category},
+   			#{userNick},
+   			#{content},
+   			SYSDATE
+   		)
+	</insert>
+	
+	<select id="selectFreeboard" parameterType="hashmap" resultType="hashmap">
+		SELECT BNO
+			 , TITLE
+			 , CATEGORY
+			 , CONTENT
+			 , HIT_CNT
+			 , REGDATE
+		  FROM BLOG_BOARD	 
+		 WHERE USER_NICKNAME = #{userNick} AND CATEGORY = #{category}
+      ORDER BY BNO DESC
+	</select>
+	
+	<select id="selectUpbit" parameterType="hashmap" resultType="hashmap">
+		SELECT BNO
+			 , TITLE
+			 , CATEGORY
+			 , CONTENT
+			 , HIT_CNT
+			 , REGDATE
+		  FROM BLOG_BOARD	 
+		 WHERE USER_NICKNAME = #{userNick} AND CATEGORY = #{category}
+      ORDER BY BNO DESC
+	</select>
+	
+	<select id="selectBithumb" parameterType="hashmap" resultType="hashmap">
+		SELECT BNO
+			 , TITLE
+			 , CATEGORY
+			 , CONTENT
+			 , HIT_CNT
+			 , REGDATE
+		  FROM BLOG_BOARD	 
+		 WHERE USER_NICKNAME = #{userNick} AND CATEGORY = #{category}
+      ORDER BY BNO DESC
+	</select>
+	
+	<select id="selectCoinone" parameterType="hashmap" resultType="hashmap">
+		SELECT BNO
+			 , TITLE
+			 , CATEGORY
+			 , CONTENT
+			 , HIT_CNT
+			 , REGDATE
+		  FROM BLOG_BOARD	 
+		 WHERE USER_NICKNAME = #{userNick} AND CATEGORY = #{category}
+      ORDER BY BNO DESC
+	</select>
+</mapper>

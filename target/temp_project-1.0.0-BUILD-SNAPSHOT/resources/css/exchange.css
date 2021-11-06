@@ -1,0 +1,177 @@
+/* 전체 div 스크롤 + 안보이게 */
+        .exchange_table {
+            overflow-y: scroll;
+        }
+
+        .exchange_table::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* 테이블 기본 설정 */
+        #table_ticker {
+            margin-left: 50px;
+            margin-right: 10px;
+            color: #000000DE;
+            border-collapse: collapse;
+            line-height: 1.5;
+        }
+
+        /* 텍스트 어라인 설정 */
+        .text_center {
+            text-align: center;
+        }
+
+        .text_right {
+            text-align: right;
+        }
+
+        /* 테이블 th 설정 */
+        .exchange_table thead th {
+            width: 350px;
+            padding: 10px;
+            padding-left: 40px;
+            font-weight: bold;
+            /* vertical-align: top; */
+            color: #00ADB5;
+            border-bottom: 3px solid #036;
+        }
+
+        /* 테이블 th:hover */
+        #table_ticker th:hover {
+            color: #fff;
+            background: #ce4869;
+            cursor: pointer;
+        }
+
+        /* 테이블 td */
+        .exchange_table tbody td {
+            width: 350px;
+            padding: 10px;
+            vertical-align: top;
+            border-bottom: 1px solid #ccc;
+        }
+        
+        #table_ticker tbody tr:hover {
+        	background: #FFCCFF;
+        }
+
+        /* 전일대비 변동에 따른 색 */
+        .change_rise {
+            color: green;
+        }
+
+        .change_fall {
+            color: red;
+        }
+
+        .change_even {
+            color: blue;
+        }
+
+
+        .button12 {
+            cursor: pointer;
+            background-color: #000;
+            width: 10px;
+            height: 50px;
+            padding: 5px 20px;
+            line-height: 64px;
+            position: relative;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            z-index: 0;
+            background: #9A8A62;
+            margin-left: 20px;
+        }
+
+        .button12 span {
+            color: #fff;
+            display: inline-block;
+            padding-left: 35px;
+            text-transform: uppercase;
+            font: bold 18px/66px Arial;
+            transform: scaleX(0.6);
+            letter-spacing: 3px;
+            transform-origin: center left;
+            transition: color 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .button12 em {
+            position: absolute;
+            height: 1px;
+            background: #fff;
+            width: 47%;
+            right: 23px;
+            top: 50%;
+            transform: scaleX(0.25);
+            -webkit-transform: scaleX(0.25);
+            transform-origin: center right;
+            transition: all 0.3s ease;
+            z-index: 1;
+        }
+
+        .button12:before,
+        .button12:after {
+            content: '';
+            background: #fff;
+            height: 50%;
+            width: 0;
+            position: absolute;
+            transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+            -webkit-transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        }
+
+        .button12:before {
+            top: 0;
+            left: 0;
+            right: auto;
+        }
+
+        .button12:after {
+            bottom: 0;
+            right: 0;
+            left: auto;
+        }
+
+        .button12:hover:before {
+            width: 100%;
+            right: 0;
+            left: auto;
+        }
+
+        .button12:hover:after {
+            width: 100%;
+            left: 0;
+            right: auto;
+        }
+
+        .button12:hover span {
+            color: #000;
+        }
+
+        .button12:hover em {
+            background: #000;
+            transform: scaleX(.51);
+            transform: scaleX(.51);
+        }
+        
+        .exchange_bold {
+        	font-weight: bold;
+        }
+        
+        .exchange_name {
+        	margin-left: 50px; 
+        	font-weight: bold;
+        	color: #FF0075;
+        	font-size: 25px;
+        }
+        
+        .exchange_en_name {
+        	color: #172774;
+        }
+        
+        .exchange_kr_name {
+        	color: #393E46;
+        }
